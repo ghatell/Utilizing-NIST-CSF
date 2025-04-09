@@ -74,130 +74,49 @@ The NIST CSF 2.0 includes a tiered maturity model that helps organizations asses
 | Risk tolerance not defined | ❌ |
 
 <details close> 
-<summary> <h3> 🗂️ NeoSecure Labs Current Status Report (Click to expand)</h3> </summary>
+<summary> <h3> 🗂️ NeoSecure Labs - Current Status Report (Click to expand)</h3> </summary>
 
-### 👥 Current NeoSecure Cybersecurity Team
+## 🧾 NeoSecure Labs – Current Cybersecurity Status
 
-- **IT Manager** – Oversees infrastructure, cloud services, and end-user support.
-- **System Administrator** – Handles on-prem and Azure-based server management.
-- **Junior Security Analyst** – Responds to user-reported security issues and performs basic log reviews.
-- **Consultant (You)** – Recently onboarded to assess security maturity and guide GRC implementation.
+| **Category**                        | **Findings**                                                                                                                                                    |
+|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Cybersecurity Team**             | - No dedicated CISO<br>- Security handled by IT Manager, SysAdmin, Junior Analyst<br>- Consultant (You) onboarded for assessment & roadmap planning            |
+| **Organizational Governance**      | - No documented cybersecurity roles or strategy<br>- Security not discussed at the leadership level<br>- No executive oversight on risk                         |
+| **Asset Management**               | - Assets tracked in Excel<br>- No criticality or sensitivity classification<br>- Laptops imaged via SOE, but no endpoint agents or tagging                      |
+| **Business Continuity & DR**       | - Backups via Azure Recovery Vault<br>- No cyber-specific DR tabletop testing<br>- Recovery testing not formally documented                                     |
+| **Vulnerability Management**       | - Nessus used ad-hoc<br>- No VM policy or SLA for patching<br>- High vulnerabilities persist with no prioritization matrix                                      |
+| **Risk Management**                | - No cyber risk register<br>- Financial risks managed separately<br>- No risk appetite or matrix for IT/security                                                |
+| **Third Party Risk Management**    | - Contracts reviewed without IT/security input<br>- No vendor questionnaires or tiering<br>- No third-party tracking or risk scoring                           |
+| **Identity & Access Management**   | - No MFA for admin or remote access<br>- Shared admin accounts<br>- No PAM solution<br>- VPN used with basic policies<br>- No access review processes           |
+| **Network Security**               | - Fortinet firewalls in place<br>- VLAN segmentation exists<br>- Diagrams outdated and rarely reviewed<br>- No active log monitoring or segmentation policies   |
+| **Physical Security**              | - Badge entry and cameras in place<br>- Manual server room access logs<br>- No escort policy for visitors<br>- Research labs have isolated access controls     |
+| **Data Security**                  | - No DLP or USB restrictions<br>- No encryption beyond cloud defaults<br>- Critical data co-mingled with general data in Azure                                  |
+| **Policies & Governance Docs**     | - One generic IT policy exists<br>- Missing InfoSec, AUP, data classification, and incident response policies<br>- No policy acknowledgment from employees      |
+| **Detection & Response**           | - No SIEM or centralized logging<br>- No incident response plan<br>- Defender alerts handled manually by IT<br>- No defined escalation or containment procedures |
+| **Security Awareness Training**    | - Onboarding-only video training<br>- No refresher courses<br>- No phishing simulations<br>- No tailored training for execs or third parties                    |
 
----
 
-### 🏛️ Organizational Governance
+</details>
 
-- The CEO has a clearly defined business vision and expansion goals.
-- Cybersecurity responsibilities are loosely assigned to IT without formal documentation.
-- No dedicated CISO, no documented cybersecurity strategy, and no oversight board involvement in risk discussions.
+<details close> 
+<summary> <h3> 🎯 NeoSecure Labs – Target Cybersecurity State (Tier 3: Consistent) (Click to expand)</h3> </summary>
 
----
-
-### 💻 Asset Management
-
-- Assets tracked using an Excel spreadsheet listing serial numbers and models.
-- No asset classification based on sensitivity or criticality.
-- Primarily SaaS-based operations (Microsoft 365 and Salesforce); some research data resides in Azure Blob storage.
-- Laptops are imaged using a Secure Operating Environment (SOE) but without tagging or agent-based tracking.
-
----
-
-### 🔁 Business Continuity & Disaster Recovery
-
-- Daily backups are performed via Azure Recovery Vault.
-- Backups are tested quarterly but results are not documented.
-- There is a general IT continuity plan, but no dedicated **cyber-specific** recovery procedures or tabletop testing.
-
----
-
-### 🛠️ Vulnerability Management
-
-- Tenable Nessus is available but used on an ad-hoc basis.
-- No vulnerability management policy exists.
-- High-risk findings persist for months due to lack of prioritization framework.
-- No remediation tracking or escalation procedures are in place.
-
----
-
-### ⚖️ Risk Management
-
-- Financial risk is handled by a separate risk team; no collaboration with IT or security.
-- No cyber risk register exists.
-- No risk appetite or tolerance has been formally defined.
-- No use of risk matrices or impact likelihood models.
-
----
-
-### 🤝 Third Party Risk Management
-
-- Contracts are reviewed by legal and procurement without IT/security input.
-- No formal third-party security questionnaires or assessments.
-- Vendors are not classified based on risk to the business or data sensitivity.
-
----
-
-### 🔐 Identity and Access Management
-
-- Microsoft Entra ID (formerly Azure AD) is used for user provisioning.
-- No MFA enforced for admins or remote access.
-- Admin accounts are shared among senior IT staff; no privileged access management.
-- No regular access reviews or offboarding audits.
-- VPN is used for remote access, but lacks conditional access policies.
-
----
-
-### 🌐 Network Security
-
-- Organization uses Fortinet Next Gen firewalls with predefined rules.
-- Network diagrams exist but are not reviewed or updated routinely.
-- VLAN segmentation exists but lacks policy-driven control.
-- No microsegmentation or zero-trust implementation.
-- Firewall logs are not actively monitored.
-
----
-
-### 🏢 Physical Security
-
-- Main office has badge entry and 24/7 camera surveillance.
-- Server room access is logged manually.
-- Contractors and visitors are not always escorted or logged digitally.
-- Research lab has separate physical access control.
-
----
-
-### 🗃️ Data Security
-
-- No data classification policy or encryption at rest beyond cloud defaults.
-- No Data Loss Prevention (DLP) tools deployed.
-- USB device usage is unrestricted.
-- Critical research data is stored in Azure but not segregated from less sensitive content.
-
----
-
-### 📜 Policy
-
-- Generic IT policy exists with minimal coverage on security controls.
-- No formal **Information Security Policy**, **Acceptable Use Policy**, or **Data Classification Policy**.
-- Employees have not acknowledged any cybersecurity policies in writing.
-
----
-
-### 🔎 Detection & Response
-
-- Microsoft Defender is deployed but used passively.
-- No SIEM, SOAR, or central logging solution implemented.
-- No documented incident response plan (IRP).
-- No escalation or triage procedures exist.
-- Incidents are handled ad hoc by IT as support tickets.
-
----
-
-### 🧠 Security Awareness & Training
-
-- Cybersecurity training is included in onboarding via a static video module.
-- No periodic refresher training or phishing simulations.
-- Executives and privileged users receive the same training as all other staff.
-- Third-party personnel receive no cybersecurity guidance.
+| **Category**                        | **Target State (Tier 3 – Consistent Maturity)**                                                                                                                   |
+|------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Cybersecurity Team**             | - Security governance led by a designated CISO or Cybersecurity Officer<br>- Security team roles defined (Governance, Blue Team, IAM, Risk)<br>- Regular reporting to leadership |
+| **Organizational Governance**      | - Documented cybersecurity strategy approved by leadership<br>- Roles & responsibilities defined across departments<br>- Security included in strategic decisions |
+| **Asset Management**               | - Centralized CMDB with agent-based asset discovery<br>- Assets classified by sensitivity & business impact<br>- Real-time asset visibility                        |
+| **Business Continuity & DR**       | - Documented cyber-specific DR plan<br>- Quarterly DR testing with results documented<br>- Business-impact-based prioritization of recovery efforts                |
+| **Vulnerability Management**       | - Formal VM program with risk-based prioritization (CVSS + asset value)<br>- SLA-backed remediation timelines<br>- Continuous scanning with Tenable or similar     |
+| **Risk Management**                | - Cyber risk register maintained and updated quarterly<br>- Organization-wide risk matrix with defined impact/likelihood<br>- Risk appetite defined and tracked   |
+| **Third Party Risk Management**    | - Vendors tiered by criticality and assessed annually<br>- TPRM process integrated with procurement<br>- Security clauses included in contracts                    |
+| **Identity & Access Management**   | - MFA enforced org-wide (especially for admins)<br>- PAM system implemented (e.g., CyberArk)<br>- Quarterly access reviews and automated offboarding               |
+| **Network Security**               | - Microsegmentation applied to critical systems<br>- Real-time monitoring of firewall activity via SIEM<br>- Updated and reviewed network diagrams and access logs |
+| **Physical Security**              | - Role-based access to server rooms & labs<br>- Digital entry/exit logging with video audit trail<br>- Contractor escort and clearance validation processes        |
+| **Data Security**                  | - DLP in place for endpoint & cloud platforms<br>- Encryption at rest and in transit enforced<br>- Data tagged by classification level and access control enforced |
+| **Policies & Governance Docs**     | - Information Security Policy, AUP, DLP, and IRP in place<br>- Employees acknowledge policies annually<br>- Regular policy review/update cycle (e.g., every 12 months) |
+| **Detection & Response**           | - SIEM deployed (e.g., Microsoft Sentinel)<br>- Detection rules mapped to MITRE ATT&CK<br>- Documented and tested Incident Response Plan (IRP)<br>- Ticketing and escalation processes defined |
+| **Security Awareness Training**    | - Role-based training programs (end-users, execs, IT)<br>- Phishing simulations conducted quarterly<br>- Third-party awareness and compliance requirements enforced |
 
 </details>
 
